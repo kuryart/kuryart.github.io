@@ -1,0 +1,53 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from "../components/header.astro";
+import under_construction from '../assets/under-construction.png';
+---
+
+<Layout>
+	<div id="container-main">
+		<Header />
+		<div class="section-main">
+			<h2>Sobre Mim</h2>
+			<p>
+				Sou um desenvolvedor fullstack com 11 anos de experiência em
+				programação e 5 anos de carreira. Durante esses anos, tive a
+				oportunidade de desenvolver projetos para Web, Desktop e Games,
+				como landing pages, e-commerces, e sistemas ERP, utilizando
+				diversas tecnologias como: Laravel, Node.js, Vue.js, MySQL,
+				PostgreSQL, SQLServer, Docker, Git, Windows Forms, entre outros.
+			</p>
+      <p>
+        "Qualquer tolo pode escrever código que um computador pode
+        entender. Bons programadores escrevem código que os humanos
+        podem entender."
+      </p>
+      <p> - Martin Fowler</p>
+			<h2>Minha Trajetória</h2>
+		</div>
+	</div>
+</Layout>
+
+<style>
+	#container-main {
+		height: 100%;
+		width: 100%;
+		background-image: linear-gradient(180deg, var(--background-1) 0%, var(--background-2) 100%);
+	}
+
+	.section-main {
+			display: flex;
+			justify-content: flex-start;
+			align-content: flex-start;
+			flex-direction: column;
+			align-items: center;
+			flex-wrap: wrap;
+			height: calc(100% - 85.88px);
+			margin: 50px 10% 50px 10%;
+	}
+
+	.wip-image {
+		width: 250px;
+		height: auto;
+	}
+</style>

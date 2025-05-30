@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from "../components/header.astro";
+import ofuscapreto from "../assets/ofuscapreto.jpg";
+import poesia from "../assets/poesia.jpg";
+import conto from "../assets/conto.jpg";
+---
+
+<Layout>
+	<div id="container-main">
+		<Header />
+		<div class="section-main">
+			<div class="card">
+				<h3>Ofuscapreto</h3>
+				<img class="card-image" src={ofuscapreto.src} alt="Ofuscapreto">
+				<p>
+					Crônicas e maluquices.
+				</p>
+				<a class="card-btn" href="https://ofuscapreto.wordpress.com">Visitar</a>
+			</div>
+			<div class="card">
+				<h3>Poesias do Cu</h3>
+				<img class="card-image" src={poesia.src} alt="Poesias do Cu">
+				<p>
+					Poesias (e maluquices).
+				</p>
+				<a class="card-btn" href="https://poesiasdocu.wordpress.com">Visitar</a>
+			</div>
+			<div class="card">
+				<h3>Contos do Cu</h3>
+				<img class="card-image" src={conto.src} alt="Contos do Cu">
+				<p>
+					Contos (e mais maluquices).
+				</p>
+				<a class="card-btn" href="https://contosdocu.wordpress.com">Visitar</a>
+			</div>
+		</div>
+	</div>
+</Layout>
+
+<style>
+	#container-main {
+		height: 100%;
+		width: 100%;
+		background-image: linear-gradient(180deg, var(--background-1) 0%, var(--background-2) 100%);
+	}
+
+	.section-main {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		align-content: center;
+		flex-wrap: wrap;
+		height: calc(100% - 85.88px);
+	}
+
+	.card {
+    display: flex;
+    flex-direction: column;
+		align-items: center;
+    padding: 20px 20px 80px 20px;
+    background-color: var(--white);
+    border-radius: 20px;
+		box-shadow: 2px 2px 8px var(--background-1), 4px 4px 8px var(--background-2), 6px 6px 8px var(--black);
+	}
+
+	.card-image {
+		object-fit: cover;
+		height: 100%;
+		width: 250px;
+    border-radius: 15px;
+	}
+
+	.card-btn {
+		background-color: var(--background-2);
+		text-decoration: none;
+		color: var(--white);
+		font-weight: bold;
+		padding: 5px 15px;
+    border-radius: 10px;
+	}
+</style>
